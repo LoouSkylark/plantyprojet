@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
+
+/* Import de la font Syne depuis Google Fonts et on l'applique sur tous les éléments de la page */
+body * {
+   font-family: 'Syne', sans-serif;
+}
+
+h2, h3 {
+    font-family: 'Syne' !important;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+.entry-header.has-text-align-center.header-footer-group {
+    display: none;
+}
+
+#site-footer.header-footer-group {
+    display: none;
+}
+
+
+/* HEADER */
+
+.site-logo {
+    width: 191.61px;
+    height: 18.87px;
+}
+
+div.header-inner.section-inner {
+    padding: 0;
+    margin: 0 0 0 37px;
+}
+
+ul.primary-menu.reset-list-style {
+
+}
+.menu-item-40 a {
+    color: black !important;
+}
+.menu-item-66 a {
+    color: black !important;
+    padding: 0 40px 0 40px;
+}
+.menu-item-41 a {
+    width: 236px;
+    color: white !important;
+    font-weight: 700;
+    background-color: #DC9F96;
+    text-align: center;
+    margin-right: 0;
+}
+
+li.menu-item a {
+    font-size: 16px !important;
+    height: 80px;
+    padding-top: 30px;
+    vertical-align: middle !important;
+
+}
+
+/* MAIN */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Syne' !important;
+
+}
+
+wp-block-heading has-text-align-center has-text-color
+h2 span {
+    font-size: 33px;
+}
+
+.wp-block-image.is-style-rounded {
+    padding: 50px 0 30px 0;
+
+}
+
+img.wp-image-101 {
+    padding: 50px 0 30px 0;
+
+}
+
+.wp-block-group.alignfull.has-background.is-layout-constrained {
+    border-radius: 0 0 5% 5%;
+    width: 2000px;
+    border-bottom: solid 20px #DCCABC;   
+    
+
+}
+
+.wp-block-button__link.has-background.wp-element-button {
+    width: 198px !important;
+    height: 55px !important;
+    font-variant: initial;
+}
+
+/* HEADER */
+
+div.footer-top.has-footer-menu {
+    justify-content: center;
+}
+
+.footer-menu a {
+    font-size: 16px;
+    color: black !important;
+    font-weight: 400;
+}
+
+
