@@ -9,7 +9,6 @@ h1, h2, h3 {
     font-family: 'Syne' !important;
 }
 
-
 p {
     font-size: 20px;
 }
@@ -34,10 +33,19 @@ a {
     height: 18.87px;
 }
 
+body:not(.enable-search-modal) .site-logo img {
+    margin-left: 37px;
+}
+
 div.header-inner.section-inner {
     padding: 0;
-    margin: 0 0 0 37px;
+    margin: 0;
+    width: 100% !important;
+    max-width: unset;
 }
+
+
+
 
 .menu-item-40 a {
     color: black !important;
@@ -68,15 +76,17 @@ li.menu-item a {
 h1 span {
     font-size: 33px;
 }
-/* padding de tous les blocs group */
-.wp-block-group__inner-container {
-    padding: 50px 0 0 0;
-}
 
 .wp-block-group.alignfull.has-background.is-layout-constrained {
-    border-radius: 0 0 5% 0;
+    padding-bottom: 1px;
 }
 
+
+.is-style-rounded-bottom {
+    color: #b9b1aa;
+    top: -90px;
+    z-index: -1;
+}
 
 .wp-block-gallery.has-nested-images.columns-2.is-cropped.wp-block-gallery-3.is-layout-flex img {
     padding: 15px;
@@ -96,6 +106,106 @@ img.wp-image-115 .wp-image-115 .wp-image-115 .wp-image-115 {
     text-transform : capitalize;
 }
 
+
+/* Images bloc NOUS RENCONTRER*/
+
+
+.nous-recontrer {
+    width: 675px !important;
+}
+
+.wp-image-204 {
+    position: relative;
+    bottom :90px;
+
+}
+
+
+.wp-image-72 {
+    position: relative;
+    bottom: 230px;
+    left: 160px;
+    
+}
+
+.wp-block-coblocks-form {
+    width: 383px;
+}
+
+.is-style-fill {
+    width: 198px !important;
+    height: 55px !important;
+    font-family: 'Syne';
+    font-weight: 400;
+    text-transform : capitalize;
+    border-radius: 5px !important;
+
+}
+
+.is-style-canette {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    background-color:#ECE2DA;
+}
+
+/* COMMANDER */
+
+.groupe-formulaire {
+    height: 450px;
+}
+
+.wp-container-8 {
+
+
+}
+
+.coblocks-form {
+    width: 450px;
+}
+
+.coblocks-field {
+    width: 383px !important;
+    height: 71px !important;
+    border-radius: 7px !important;
+    margin: 0 !important;
+    gap: 10px !important;
+}
+
+/* Personnalisation du formulaire de commande */
+
+.wpcf7.js {
+    display: flex;
+    flex-direction: row;
+}
+
+#wpcf7-f365-p30-o1 label {
+    color: white !important;
+    font-size: 20px !important;
+    width: 383px !important;
+}
+
+#wpcf7-f365-p30-o1 h3 {
+    color: white !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+}
+
+.wpcf7-form-control {
+    width: 383px !important;
+    height: 71px !important;
+    border-radius: 7px !important;
+    margin: 0 !important;
+}
+
+.informations {
+    width: 30%;
+}
+
+.livraison {
+    width: 30%;
+}
+
+
 /* FOOTER */
 
 div.footer-top.has-footer-menu {
@@ -108,4 +218,51 @@ div.footer-top.has-footer-menu {
     font-weight: 400;
 }
 
+/* Le code ci-dessous correspond à la version responsive uniquement */
 
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+
+    h1, h2, h3, p {
+        font-size: 80% !important;
+    }
+
+    .wp-image-204 {
+        width: 50%;
+        height: 50%;
+    
+    }
+
+    .wp-image-72 {
+        position: relative;
+        bottom: 180px;
+        left: 60px;
+        width: 70%;
+        height: 70%;
+        
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 20px;
+     
+    }
+
+    .populaires-cards .card {
+        width: 100%;
+        max-width: 258px;
+    }
+
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    /* ... */
+    h1, h2, h3 {
+        font-size: 15px;
+    }
+}
