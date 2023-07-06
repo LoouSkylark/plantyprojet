@@ -26,6 +26,7 @@ a {
 }
 
 
+
 /* HEADER */
 
 .site-logo {
@@ -43,8 +44,6 @@ div.header-inner.section-inner {
     width: 100% !important;
     max-width: unset;
 }
-
-
 
 
 .menu-item-40 a {
@@ -74,7 +73,7 @@ li.menu-item a {
 /* MAIN */
 
 h1 span {
-    font-size: 33px;
+    font-size: 38px;
 }
 
 .wp-block-group.alignfull.has-background.is-layout-constrained {
@@ -111,52 +110,107 @@ img.wp-image-115 .wp-image-115 .wp-image-115 .wp-image-115 {
 
 
 .nous-recontrer {
-    width: 675px !important;
+    width:  680px !important;
 }
 
-.wp-image-204 {
+.titre204-parent {
     position: relative;
-    bottom :90px;
-
 }
 
+.image204-enfant {
+    position: absolute;
+    top: 0;
+    left: 400px;
+}
 
-.wp-image-72 {
+.block72-parent {
     position: relative;
-    bottom: 230px;
-    left: 160px;
-    
+    padding: 0 100px 0 100px;
+
 }
 
-.wp-block-coblocks-form {
-    width: 383px;
+.image72-enfant {
+    position: absolute;
+    z-index: 1;
+    bottom: -90px;
+    left: 50px; 
 }
 
-.is-style-fill {
+.group-contact {
+    position: relative;
+    z-index: -2;
+    display: flex;
+    align-items: center;
+
+}
+#wpcf7-f388-p28-o1 {
+    justify-items: center;
+}
+
+#wpcf7-f388-p28-o1 label {
+    font-size: 20px !important;
+
+}
+
+.wpcf7-form-control.message-contact {
+    height: 237px !important;
+}
+
+.wpcf7-form-control.cta-contact {
     width: 198px !important;
     height: 55px !important;
+    background-color: #DC9F96 !important;
     font-family: 'Syne';
+    font-size: 15px !important;
     font-weight: 400;
-    text-transform : capitalize;
+    text-transform : capitalize !important;
     border-radius: 5px !important;
-
 }
 
+
+.image79-enfant {
+    position: absolute;
+    z-index: -1;
+    top: 520px;
+    left: 415px; 
+}
+
+.message-contact {
+    position: relative;
+}
+/* mettre le bloc message pas after en relative voir proprités after et before*/
+.message-contact:after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: url("/plantyprojet/wp-content/uploads/2023/06/Group-16.png") no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+    left: -10px;
+}
+
+.cta-block {
+    text-align: center;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+
 .is-style-canette {
+    padding-top: 40px;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     background-color:#ECE2DA;
 }
 
+
+
 /* COMMANDER */
 
 .groupe-formulaire {
     height: 450px;
-}
-
-.wp-container-8 {
-
-
 }
 
 .coblocks-form {
@@ -173,9 +227,30 @@ img.wp-image-115 .wp-image-115 .wp-image-115 .wp-image-115 {
 
 /* Personnalisation du formulaire de commande */
 
-.wpcf7.js {
-    display: flex;
-    flex-direction: row;
+.formulaire-commande {
+    display: grid;
+    grid-template-columns: 420px 420px;
+    grid-template-rows: 500px 100px;
+    gap: 35px;
+    -ms-grid-column-align: center;
+
+}
+
+.informations {
+    border-right: 1px solid white;
+    padding-right: 50px !important;
+    
+}
+
+.informations-title {
+    margin: 0;
+    
+}
+
+.cta {
+    grid-column: 1 / 2;
+
+
 }
 
 #wpcf7-f365-p30-o1 label {
@@ -195,14 +270,18 @@ img.wp-image-115 .wp-image-115 .wp-image-115 .wp-image-115 {
     height: 71px !important;
     border-radius: 7px !important;
     margin: 0 !important;
+    margin-top: 8px !important;
 }
 
-.informations {
-    width: 30%;
-}
-
-.livraison {
-    width: 30%;
+.cta-commande {
+    width: 198px !important;
+    height: 55px !important;
+    background-color: #DC9F96 !important;
+    font-family: 'Syne';
+    font-size: 15px !important;
+    font-weight: 400;
+    text-transform : capitalize !important;
+    border-radius: 5px !important;
 }
 
 
@@ -224,14 +303,20 @@ div.footer-top.has-footer-menu {
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
 
-    h1, h2, h3, p {
-        font-size: 80% !important;
+    h1 {
+        font-size: 28px !important;
     }
 
     .wp-image-204 {
         width: 50%;
         height: 50%;
     
+    }
+
+    .image204-enfant {
+        position: absolute;
+        top: 0;
+        left: -1px;
     }
 
     .wp-image-72 {
@@ -241,6 +326,13 @@ div.footer-top.has-footer-menu {
         width: 70%;
         height: 70%;
         
+    }
+
+    .image79-enfant {
+        position: absolute;
+        z-index: -1;
+        top: 480px;
+        left: 90px; 
     }
 
     .populaires-cards {
@@ -255,6 +347,10 @@ div.footer-top.has-footer-menu {
     .populaires-cards .card {
         width: 100%;
         max-width: 258px;
+    }
+
+    .groupe-nous-rencontrer {
+        margin-bottom: 0 !important;
     }
 
 }
