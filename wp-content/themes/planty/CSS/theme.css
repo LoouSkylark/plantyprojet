@@ -15,6 +15,7 @@ p {
 
 a {
 	text-decoration: none !important;
+    font-size: 16px;
 }
 
 .entry-header.has-text-align-center.header-footer-group {
@@ -45,7 +46,6 @@ div.header-inner.section-inner {
     max-width: unset;
 }
 
-
 .menu-item-40 a {
     color: black !important;
 }
@@ -66,8 +66,9 @@ li.menu-item a {
     font-size: 16px !important;
     height: 80px;
     padding-top: 30px;
-    vertical-align: middle !important;
-
+}
+.header-titles-wrapper {
+    padding: 20px 0 20px 0;
 }
 
 /* MAIN */
@@ -76,10 +77,13 @@ h1 span {
     font-size: 38px;
 }
 
+.bloc-boisson { 
+    margin-bottom: -20px !important;
+}
+
 .wp-block-group.alignfull.has-background.is-layout-constrained {
     padding-bottom: 1px;
 }
-
 
 .is-style-rounded-bottom {
     color: #b9b1aa;
@@ -87,14 +91,24 @@ h1 span {
     z-index: -1;
 }
 
-.wp-block-gallery.has-nested-images.columns-2.is-cropped.wp-block-gallery-3.is-layout-flex img {
-    padding: 15px;
-
+.titre-energie {
+    margin-top: -30px !important;
 }
 
-img.wp-image-115 .wp-image-115 .wp-image-115 .wp-image-115 {
-    width: 393px;
-    height: 262px;
+.titre-gout {
+    margin-top: -20px !important;
+    margin-bottom: 10px !important;
+}
+
+.wp-block-gallery.has-nested-images.columns-2.is-cropped.wp-block-gallery-3.is-layout-flex img {
+    width: 393px !important;
+    height: 262px !important;
+    padding: 15px;
+}
+
+.galerie-parfum img {
+
+
 }
 
 .wp-block-button__link.has-background.wp-element-button {
@@ -103,6 +117,17 @@ img.wp-image-115 .wp-image-115 .wp-image-115 .wp-image-115 {
     font-family: 'Syne';
     font-weight: 400;
     text-transform : capitalize;
+    margin-bottom: 0 !important;
+}
+
+/* HOOK ADMIN */
+
+.admin-link {
+    color: black !important;
+    padding-top: 30px;
+    width: 114px;
+    text-align: center;
+    
 }
 
 
@@ -113,27 +138,46 @@ img.wp-image-115 .wp-image-115 .wp-image-115 .wp-image-115 {
     width:  680px !important;
 }
 
-.titre204-parent {
+.titre-204 {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 0;
+}
+
+.titre-204::before {
+    position: absolute;
+    content: "";
+    width: 145px;
+    height: 100%;
+    background: url("/plantyprojet/wp-content/uploads/2023/06/Group-2.png");
+    background-size: 100% 100%;
+    left: -180px;
+    bottom: -25px;
+}
+
+.titre-equipe {
+    margin-top: 80px !important;
+    margin-bottom: -20px !important;
+}
+
+.block-equipe {
+    gap: 0px;
+}
+
+.block-72 {
     position: relative;
 }
 
-.image204-enfant {
+.block-72::after {
     position: absolute;
-    top: 0;
-    left: 400px;
-}
-
-.block72-parent {
-    position: relative;
-    padding: 0 100px 0 100px;
-
-}
-
-.image72-enfant {
-    position: absolute;
+    content: "";
+    width: 180px;
+    height: 206px;
+    background: url("/plantyprojet/wp-content/uploads/2023/06/Group-4-e1688633658845.png");
+    background-size: 100% 100%;
     z-index: 1;
-    bottom: -90px;
-    left: 50px; 
+    bottom: -80px;
+    right: -120px; 
 }
 
 .group-contact {
@@ -167,36 +211,27 @@ img.wp-image-115 .wp-image-115 .wp-image-115 .wp-image-115 {
     border-radius: 5px !important;
 }
 
-
-.image79-enfant {
-    position: absolute;
-    z-index: -1;
-    top: 520px;
-    left: 415px; 
-}
-
-.message-contact {
+.block-message {
     position: relative;
 }
-/* mettre le bloc message pas after en relative voir proprités after et before*/
-.message-contact:after {
+
+.block-message:after {
     position: absolute;
     content: "";
-    width: 30px;
-    height: 30px;
+    width: 185px;
+    height: 178px;
     background: url("/plantyprojet/wp-content/uploads/2023/06/Group-16.png") no-repeat;
     background-size: 100% 100%;
-    z-index: 1;
-    left: -10px;
+    z-index: -1;
+    left: -88px;
+    bottom: -63px;
 }
 
 .cta-block {
     text-align: center;
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0 0 50px 70px !important;
+
 }
-
-
 
 .is-style-canette {
     padding-top: 40px;
@@ -207,49 +242,63 @@ img.wp-image-115 .wp-image-115 .wp-image-115 .wp-image-115 {
 
 
 
-/* COMMANDER */
+/* PAGE COMMANDER */
 
-.groupe-formulaire {
-    height: 450px;
+.container-commande {
+    display: flex;
+    padding-top: 20px !important;
+ }
+
+.groupe-commander {
+    width: 860px !important;
 }
 
-.coblocks-form {
-    width: 450px;
+.titre-commander {
+    margin-bottom: 60px !important;
 }
 
-.coblocks-field {
-    width: 383px !important;
-    height: 71px !important;
-    border-radius: 7px !important;
-    margin: 0 !important;
-    gap: 10px !important;
+.titre-votre-commande {
+    margin-top: 50px !important;
+    margin-bottom: 10px !important;
 }
+
+.bloc-parfum { 
+    margin-top: 0 !important;
+}
+
+.bloc-gout { 
+    gap: 30px;
+    margin-top: 0 !important;
+}
+
 
 /* Personnalisation du formulaire de commande */
 
 .formulaire-commande {
-    display: grid;
-    grid-template-columns: 420px 420px;
-    grid-template-rows: 500px 100px;
-    gap: 35px;
-    -ms-grid-column-align: center;
+    display: grid;    
+    justify-content: center !important;
+    color: white;
+}
 
+.informations-titre, .livraison-titre {
+    margin-top: 0 !important;    
 }
 
 .informations {
+    height: 435px;
     border-right: 1px solid white;
-    padding-right: 50px !important;
-    
+    padding: 0 45px 0 0 !important;  
+    margin: 0 !important;
 }
 
-.informations-title {
-    margin: 0;
-    
+.livraison {
+    padding-left: 45px;
+    margin: 0 !important;
 }
 
 .cta {
-    grid-column: 1 / 2;
-
+    grid-column: 1 / 3;
+    text-align: center;
 
 }
 
@@ -282,6 +331,8 @@ img.wp-image-115 .wp-image-115 .wp-image-115 .wp-image-115 {
     font-weight: 400;
     text-transform : capitalize !important;
     border-radius: 5px !important;
+    text-align: center !important;
+    margin: 30px 0 0 70px !important;
 }
 
 
@@ -307,33 +358,9 @@ div.footer-top.has-footer-menu {
         font-size: 28px !important;
     }
 
-    .wp-image-204 {
-        width: 50%;
-        height: 50%;
-    
-    }
+ 
 
-    .image204-enfant {
-        position: absolute;
-        top: 0;
-        left: -1px;
-    }
 
-    .wp-image-72 {
-        position: relative;
-        bottom: 180px;
-        left: 60px;
-        width: 70%;
-        height: 70%;
-        
-    }
-
-    .image79-enfant {
-        position: absolute;
-        z-index: -1;
-        top: 480px;
-        left: 90px; 
-    }
 
     .populaires-cards {
         display: flex;

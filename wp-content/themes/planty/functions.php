@@ -24,7 +24,7 @@ function theme_enqueue_styles(){
  add_filter( 'wp_nav_menu_items', 'add_extra_item_to_nav_menu', 10, 2 );
  function add_extra_item_to_nav_menu( $items, $args ) {
      if (is_user_logged_in() && $args->theme_location == 'primary') {
-        $admin_link = '<li><a href="' . get_admin_url() . '">Admin</a></li>';
+        $admin_link = '<li><a class="admin-link" href="' . get_admin_url() . '">Admin</a></li>';
 
         // Recherche des deux éléments à diviser
         $menu_items = explode( '</li>', $items );
