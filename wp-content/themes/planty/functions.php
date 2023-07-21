@@ -9,21 +9,10 @@ function theme_enqueue_styles(){
     wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/css/theme.css'));
 }
 
-
-/* HOOK ADMIN  ???
-		<?php if(is_user_logged_in()) : ?>
-				<div class="user-logged">
-					<!-- Pour afficher un menu Admin invisible si non connecté-->
-					<a target= "_blank"href="<?php echo admin_url(); ?>">Admin</a>
-					<!-- Idem avec option de déconnexion -->
-					<a href="<?php echo wp_logout_url(home_url); ?>">Déconnexion</a>
-				</div>
-			<?php endif; ?> 
- */
-
+// Hook qui permet d'ajouter un menu supplémentaire à la barre de navigation
  add_filter( 'wp_nav_menu_items', 'add_extra_item_to_nav_menu', 10, 2 );
  function add_extra_item_to_nav_menu( $items, $args ) {
-     if (is_user_logged_in() && $args->theme_location == 'primary') {
+     if (is_user_logged_in() && $args->theme_location == 'primary' || is_user_logged_in() && $args->theme_location =='mobile') {
         $admin_link = '<li><a class="admin-link" href="' . get_admin_url() . '">Admin</a></li>';
 
         // Recherche des deux éléments à diviser
@@ -39,3 +28,14 @@ function theme_enqueue_styles(){
      }
      return $items;
  }
+
+ /* HOOK ADMIN  ???
+		<?php if(is_user_logged_in()) : ?>
+				<div class="user-logged">
+					<!-- Pour afficher un menu Admin invisible si non connecté-->
+					<a target= "_blank"href="<?php echo admin_url(); ?>">Admin</a>
+					<!-- Idem avec option de déconnexion -->
+					<a href="<?php echo wp_logout_url(home_url); ?>">Déconnexion</a>
+				</div>
+			<?php endif; ?> 
+ */
