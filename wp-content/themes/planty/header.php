@@ -40,13 +40,19 @@
 
 					<div class="header-titles">
 
+
+
 						<?php
 							// Site title or logo.
 							twentytwenty_site_logo();
 
 							// Site description.
 							twentytwenty_site_description();
+
+						// Trouver le nom des menus
+						// wp_die(var_dump(get_registered_nav_menus()));
 						?>
+						
 
 					</div><!-- .header-titles -->
 

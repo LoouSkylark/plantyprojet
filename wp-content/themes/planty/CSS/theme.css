@@ -1,16 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Syne:wght@400;700;800&display=swap');
 
 /* Import de la font Syne depuis Google Fonts et on l'applique sur tous les éléments de la page */
 body * {
-   font-family: 'Syne', sans-serif;
+   font-family: 'Syne', sans-serif !important;
+}
+
+h1, h2, h3 {
+    font-family: 'Syne' !important;
+}
+
+h1 {
+    font-size: 38px !important;
 }
 
 h2, h3 {
-    font-family: 'Syne' !important;
+    font-size: 30px !important;
+}
+
+p {
+    font-size: 20px;
 }
 
 a {
 	text-decoration: none !important;
+    font-size: 16px;
 }
 
 .entry-header.has-text-align-center.header-footer-group {
@@ -22,6 +36,7 @@ a {
 }
 
 
+
 /* HEADER */
 
 .site-logo {
@@ -29,17 +44,21 @@ a {
     height: 18.87px;
 }
 
+body:not(.enable-search-modal) .site-logo img {
+    margin-left: 37px;
+}
+
 div.header-inner.section-inner {
     padding: 0;
-    margin: 0 0 0 37px;
+    margin: 0;
+    width: 100% !important;
+    max-width: unset;
 }
 
-ul.primary-menu.reset-list-style {
-
-}
 .menu-item-40 a {
     color: black !important;
 }
+
 .menu-item-66 a {
     color: black !important;
     padding: 0 40px 0 40px;
@@ -57,60 +76,541 @@ li.menu-item a {
     font-size: 16px !important;
     height: 80px;
     padding-top: 30px;
-    vertical-align: middle !important;
-
 }
+.header-titles-wrapper {
+    padding: 20px 0 20px 0;
+}
+
+/* MENU MOBILE */
+    .toggle-text {
+        color: white !important;
+    }
+
+    .admin-link {
+        font-size: 16px !important;
+        text-align: start !important;
+    }
+    
+    .ancestor-wrapper a {
+        color: black !important;
+        background-color: white !important;
+        text-align: start !important;
+    }
 
 /* MAIN */
-body {
-    margin: 0;
-    padding: 0;
+
+h1 span {
+    font-size: 30px;
 }
 
-h1, h2, h3 {
-    font-family: 'Syne' !important;
-
+.wp-image-104 {
+    padding-right: 30px;
 }
 
-wp-block-heading has-text-align-center has-text-color
-h2 span {
-    font-size: 33px;
-}
-
-.wp-block-image.is-style-rounded {
-    padding: 50px 0 30px 0;
-
-}
-
-img.wp-image-101 {
-    padding: 50px 0 30px 0;
-
+.bloc-boisson { 
+    margin-bottom: -20px !important;
 }
 
 .wp-block-group.alignfull.has-background.is-layout-constrained {
-    border-radius: 0 0 5% 5%;
-    width: 2000px;
-    border-bottom: solid 20px #DCCABC;   
-    
+    padding-bottom: 1px;
+}
 
+.is-style-rounded-bottom {
+    color: #b9b1aa;
+    top: -90px;
+    z-index: -1;
+}
+
+.titre-energie {
+    margin-top: -30px !important;
+}
+
+.titre-gout {
+    margin-top: -20px !important;
+    margin-bottom: 10px !important;
+}
+
+.bloc-groupe-gout {
+    text-align: center;
+
+}
+
+.wp-block-gallery.has-nested-images.columns-2.is-cropped.wp-block-gallery-3.is-layout-flex img {
+    width: 393px !important;
+    height: 262px !important;
+    padding: 15px;
+}
+
+.galerie-parfum {
+    max-width: 800px !important;
+    display: flex;
+    margin: 0 auto !important;
+}
+
+.wp-block-image.alignfull.size-large {
+    margin-bottom: 0 !important;
 }
 
 .wp-block-button__link.has-background.wp-element-button {
     width: 198px !important;
     height: 55px !important;
-    font-variant: initial;
-}
-
-/* HEADER */
-
-div.footer-top.has-footer-menu {
-    justify-content: center;
-}
-
-.footer-menu a {
-    font-size: 16px;
-    color: black !important;
+    font-family: 'Syne';
     font-weight: 400;
+    text-transform : capitalize;
+    margin-bottom: 0 !important;
+}
+
+/* HOOK ADMIN */
+
+.admin-link {
+    color: black !important;
+    padding-top: 30px;
+    width: 114px;
+    text-align: center !important;    
 }
 
 
+/* Images bloc NOUS RENCONTRER*/
+
+.nous-recontrer {
+    width:  680px !important;
+}
+
+.titre-204 {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 0;
+}
+
+.titre-204::before {
+    position: absolute;
+    content: "";
+    width: 145px;
+    height: 100%;
+    background: url("/plantyprojet/wp-content/uploads/2023/06/Group-2.png");
+    background-size: 100% 100%;
+    left: -180px;
+    bottom: -25px;
+}
+
+.titre-equipe {
+    margin-top: 80px !important;
+    margin-bottom: -20px !important;
+}
+
+.block-equipe {
+    gap: 0px;
+}
+
+.block-72 {
+    position: relative;
+}
+
+.block-72::after {
+    position: absolute;
+    content: "";
+    width: 180px;
+    height: 206px;
+    background: url("/plantyprojet/wp-content/uploads/2023/06/Group-4-e1688633658845.png");
+    background-size: 100% 100%;
+    z-index: 1;
+    bottom: -80px;
+    right: -120px; 
+}
+
+.group-contact {
+    display: flex;
+    align-items: center;
+
+}
+#wpcf7-f388-p28-o1 {
+    justify-items: center;
+}
+
+#wpcf7-f388-p28-o1 label {
+    font-size: 20px !important;
+}
+
+.wpcf7-form-control.message-contact {
+    height: 237px !important;
+}
+
+.wpcf7-form-control.cta-contact {
+    width: 198px !important;
+    height: 55px !important;
+    background-color: #DC9F96 !important;
+    font-family: 'Syne';
+    font-size: 15px !important;
+    font-weight: 400;
+    text-transform : capitalize !important;
+    border-radius: 5px !important;
+}
+
+.block-message {
+    position: relative;
+    z-index: 2;
+}
+
+.block-message:after {
+    position: absolute;
+    content: "";
+    width: 185px;
+    height: 178px;
+    background: url("/plantyprojet/wp-content/uploads/2023/06/Group-16.png") no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+    left: -88px;
+    bottom: -63px;
+}
+
+.cta-block {
+    text-align: center;
+}
+
+.is-style-canette {
+    padding-top: 40px;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    background-color:#ECE2DA;
+}
+
+
+/* PAGE COMMANDER */
+
+.container-commande {
+    padding-top: 20px !important;
+ }
+
+.groupe-commander {
+    width: 860px !important;
+}
+
+.titre-commander {
+    margin-bottom: 60px !important;
+}
+
+.titre-votre-commande {
+    margin-top: 50px !important;
+    margin-bottom: 10px !important;
+}
+
+.bloc-parfum { 
+    margin-top: 0 !important;
+}
+
+.bloc-gout { 
+    display: flex;
+    gap: 30px;
+    margin-top: 0 !important;
+    display: flex;
+    justify-content: center !important;
+}
+
+/* Boutons de sélection du nombre d'articles */
+
+.bloc-articles {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+
+.nbr-articles {
+    display: flex;
+    flex-direction: row;
+    width: 82px;
+    height: 56px;
+}
+
+.nbr {
+    font-family: 'inter' !important;
+    Width: 51px !important;
+    border: none !important;
+    text-align: center !important;
+    background-color: white !important;
+    color: black;
+    border-radius: 5px 0 0 5px !important;
+}
+
+.plus-moins {
+    text-align: start;
+    line-height: 0;
+    margin: 0 !important;
+}
+
+.plus, .moins {
+    background-color: #DC9F96 !important;
+    Width: 31px !important;
+    Height: 28px !important;
+    vertical-align: middle !important;
+    padding: 0;
+    font: 20px "syne" !important;
+}
+
+.plus {
+    border-top-right-radius: 5px;
+}
+
+.moins {
+    border-bottom-right-radius: 5px;
+    border-top: solid 1px #ECE2DA  !important;
+}
+
+.cta-ok {
+    font-weight: 400 !important;
+    Width: 100px !important;
+    background-color: #E0B9B4 !important;
+    text-transform : capitalize !important;
+    border-radius: 5px !important;
+    padding: 0 !important;
+}
+
+
+/* Personnalisation du formulaire de commande */
+
+.formulaire-commande {
+    display: grid;    
+    justify-content: center !important;
+    color: white;
+}
+
+.informations-titre, .livraison-titre {
+    margin-top: 0 !important;    
+}
+
+.informations {
+    height: 435px;
+    border-right: 1px solid white;
+    padding: 0 45px 0 0 !important;  
+    margin: 0 !important;
+}
+
+.livraison {
+    padding-left: 45px;
+    margin: 0 !important;
+}
+
+.cta {
+    grid-column: 1 / 3;
+    text-align: center;
+}
+
+#wpcf7-f365-p30-o1 label {
+    color: white !important;
+    font-size: 20px !important;
+    width: 383px !important;
+}
+
+#wpcf7-f365-p30-o1 h3 {
+    color: white !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+}
+
+.wpcf7-form-control {
+    width: 383px !important;
+    height: 71px !important;
+    border-radius: 7px !important;
+    margin: 0 !important;
+    margin-top: 8px !important;
+}
+
+.cta-commande {
+    width: 198px !important;
+    height: 55px !important;
+    background-color: #DC9F96 !important;
+    font-family: 'Syne';
+    font-size: 15px !important;
+    font-weight: 400;
+    text-transform : capitalize !important;
+    border-radius: 5px !important;
+    text-align: center !important;
+    margin: 30px 0 0 0 !important;
+}
+
+.wpcf7-spinner {
+    display: none !important;
+}
+
+
+
+
+/* FOOTER */
+
+    .footer-nav-widgets-wrapper.header-footer-group {
+        margin-top: 0 !important;
+    }
+    div.footer-top.has-footer-menu {
+        justify-content: center;
+    }
+
+    .footer-menu a {
+        font-size: 16px;
+        color: black !important;
+        font-weight: 400;
+    }
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    h1 {
+        font-size: 28px !important;
+    }
+
+    h2, h3, #wpcf7-f365-p30-o1 h3 {
+        font-size: 25px !important;  
+    }
+
+    .groupe-nous-rencontrer {
+        margin-bottom: 0 !important;
+    }
+
+    .titre-204::before {
+        left: -50px;
+    }
+
+    .block-72::after {
+        right: -20px; 
+    }
+    .groupe-commander {
+        width: 700px !important;
+    }
+
+    .titre-votre-commande {
+        text-align: center;
+    }
+
+    .colonne-quant {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formulaire-commande {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .informations {
+        border-right: none; 
+        margin-bottom: 40px !important;
+        padding-right: 0 !important;
+    }
+    
+    .livraison {
+        padding-left: 0;
+    }
+
+}
+
+/* Small devices (phones, less than 768px) */
+@media  screen and (max-width: 767.98px) {
+    /* ... */
+    h1 {
+    font-size: 18px !important;
+    }
+
+    h2, h3, #wpcf7-f365-p30-o1 h3 {
+    font-size: 25px !important;  
+    }
+
+    span {
+    font-size: 15px !important;
+    }
+
+    p {
+    font-size: 14px !important;
+    }
+
+    .wp-image-104 {
+    padding-right: 10px;
+    }
+
+    .titre-gout {
+    padding-top: 30px !important;
+    }
+
+    .titre-204::before {
+        width: 70px;
+        height: 70px;
+        top: 60px;
+        left: 20px;
+    }
+
+    .block-72::after {
+    background-size: ;
+    width: 140px;
+    height: 160px;
+    right: -25px;
+    bottom: -60px;
+
+    }
+
+    #wpcf7-f388-p28-o1 {
+    width: 290px;
+   }
+
+   .block-message:after {
+    width: 100px;
+    height: 95px;
+    left: -40px;
+    bottom: -40px;
+    }
+
+    label {
+    margin: 0px !important;
+    }
+
+    .container-commande {
+        padding: 10px 0 !important;
+    }
+
+    .titre-votre-commande {
+        text-align: center;
+    }
+
+    .colonne-quant {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formulaire-commande {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .informations {
+        border-right: none;
+        border-bottom: solid 1px white;
+        margin-bottom: 20px !important;
+        padding-right: 0 !important;
+    }
+    
+    .livraison {
+        padding-left: 0;
+    
+    }
+
+    #wpcf7-f365-p30-o1 label {
+        max-width: 300px !important;
+    }
+
+    .groupe-commander {
+        width: 320px !important;
+    }
+
+    .cta-commande {
+    margin: 0!important;
+    }
+
+
+
+}
+
+    
