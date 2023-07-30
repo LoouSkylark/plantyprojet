@@ -81,16 +81,21 @@ li.menu-item a {
     padding: 20px 0 20px 0;
 }
 
+/* HOOK ADMIN */
+
+.admin-link {
+    font-size: 16px !important;
+    color: black !important;
+    padding-top: 30px;
+    width: 114px;
+    text-align: center !important;    
+}
+
 /* MENU MOBILE */
     .toggle-text {
         color: white !important;
     }
 
-    .admin-link {
-        font-size: 16px !important;
-        text-align: start !important;
-    }
-    
     .ancestor-wrapper a {
         color: black !important;
         background-color: white !important;
@@ -101,10 +106,6 @@ li.menu-item a {
 
 h1 span {
     font-size: 30px;
-}
-
-.wp-image-104 {
-    padding-right: 30px;
 }
 
 .bloc-boisson { 
@@ -156,19 +157,10 @@ h1 span {
     height: 55px !important;
     font-family: 'Syne';
     font-weight: 400;
+    background-color: #E0B9B4 !important;
     text-transform : capitalize;
     margin-bottom: 0 !important;
 }
-
-/* HOOK ADMIN */
-
-.admin-link {
-    color: black !important;
-    padding-top: 30px;
-    width: 114px;
-    text-align: center !important;    
-}
-
 
 /* Images bloc NOUS RENCONTRER*/
 
@@ -238,7 +230,7 @@ h1 span {
 .wpcf7-form-control.cta-contact {
     width: 198px !important;
     height: 55px !important;
-    background-color: #DC9F96 !important;
+    background-color: #E0B9B4 !important;
     font-family: 'Syne';
     font-size: 15px !important;
     font-weight: 400;
@@ -418,7 +410,7 @@ h1 span {
 .cta-commande {
     width: 198px !important;
     height: 55px !important;
-    background-color: #DC9F96 !important;
+    background-color: #E0B9B4 !important;
     font-family: 'Syne';
     font-size: 15px !important;
     font-weight: 400;
@@ -456,12 +448,21 @@ h1 span {
 /* Medium devices (tablets, less/equal than 1024px) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
+    .admin-link {
+        text-align: start !important;
+    }
+    
+
     h1 {
         font-size: 28px !important;
     }
 
     h2, h3, #wpcf7-f365-p30-o1 h3 {
         font-size: 25px !important;  
+    }
+
+    .titre-gout {
+        margin-top: 10px !important;
     }
 
     .groupe-nous-rencontrer {
@@ -510,6 +511,11 @@ h1 span {
 /* Small devices (phones, less than 768px) */
 @media  screen and (max-width: 767.98px) {
     /* ... */
+    
+    .admin-link {
+    text-align: start !important;
+    }
+    
     h1 {
     font-size: 18px !important;
     }
@@ -523,11 +529,7 @@ h1 span {
     }
 
     p {
-    font-size: 14px !important;
-    }
-
-    .wp-image-104 {
-    padding-right: 10px;
+    font-size: 16px !important;
     }
 
     .titre-gout {
@@ -537,12 +539,11 @@ h1 span {
     .titre-204::before {
         width: 70px;
         height: 70px;
-        top: 60px;
+        top: 50px;
         left: 20px;
     }
 
     .block-72::after {
-    background-size: ;
     width: 140px;
     height: 160px;
     right: -25px;
@@ -551,7 +552,7 @@ h1 span {
     }
 
     #wpcf7-f388-p28-o1 {
-    width: 290px;
+    width: 280px;
    }
 
    .block-message:after {
@@ -609,8 +610,4 @@ h1 span {
     margin: 0!important;
     }
 
-
-
 }
-
-    
