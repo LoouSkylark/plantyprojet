@@ -28,14 +28,3 @@ function theme_enqueue_styles(){
      }
      return $items;
  }
-
- /* HOOK ADMIN  ???
-		<?php if(is_user_logged_in()) : ?>
-				<div class="user-logged">
-					<!-- Pour afficher un menu Admin invisible si non connecté-->
-					<a target= "_blank"href="<?php echo admin_url(); ?>">Admin</a>
-					<!-- Idem avec option de déconnexion -->
-					<a href="<?php echo wp_logout_url(home_url); ?>">Déconnexion</a>
-				</div>
-			<?php endif; ?> 
- */
